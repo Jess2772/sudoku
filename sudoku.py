@@ -49,11 +49,11 @@ def valid_board(board, val, location):
             return False
 
     #Check to see if a square is valid
-    box_x = location[1] // 3
-    box_y = location[0] // 3
+    square_x = location[1] // 3
+    square_y = location[0] // 3
 
-    for i in range (box_y * 3, box_y * 3 + 3): # Identifying which of the 9 boxes to search in
-        for j in range (box_x * 3, box_x * 3 + 3):
+    for i in range (square_y * 3, square_y * 3 + 3): # Identifying which of the 9 boxes to search in
+        for j in range (square_x * 3, square_x * 3 + 3):
             if board[i][j] == val and location != (i,j):
                 return False # If value is already found in square, return False
 
