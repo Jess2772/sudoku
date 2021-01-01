@@ -3,5 +3,5 @@
 * Utilizes backtracking, recursion, and array manipulation
 
 # Technologies
-Project is created with: 
-* Python 3.6
+Project was created with: 
+* Python 3.8.2
