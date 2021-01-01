@@ -55,9 +55,9 @@ def valid_board(board, val, location):
     for i in range (box_y * 3, box_y * 3 + 3): # Identifying which of the 9 boxes to search in
         for j in range (box_x * 3, box_x * 3 + 3):
             if board[i][j] == val and location != (i,j):
-                return False #If value is already found in square, return False
+                return False # If value is already found in square, return False
 
-    return True # If number placement is valid, return True
+    return True # If value is valid in selected location, return True
 
 
 # Solve the sudoku board using backtracking
@@ -75,7 +75,7 @@ def solve_board(board):
                 if solve_board(board):
                     return True
 
-                board[row][col] = 0 # If not valid, reset value back to 0 and backtrack. Continue trying other numbers.
+                board[row][col] = 0 # If not valid, reset value to 0 and backtrack. Continue trying other numbers.
 
     return False
 
